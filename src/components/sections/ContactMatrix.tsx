@@ -21,7 +21,7 @@ export function ContactMatrix() {
         对新的项目挑战、AI技术探索或未来的机会始终保持开放态度。欢迎随时交流！
       </p>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
         <button
           onClick={handleCopy}
           className="flex items-center gap-2 px-6 py-3 rounded-md bg-slate-900 border border-white/10 hover:border-emerald-500/50 transition-all group relative overflow-hidden"
@@ -42,14 +42,6 @@ export function ContactMatrix() {
         >
           <Github className="w-5 h-5" />
         </a>
-      </div>
-
-      <div className="flex items-center justify-center gap-2 font-mono text-sm text-slate-500">
-        <span className="animate-pulse">_</span>
-        <span>连接已由外部主机关闭。</span>
-      </div>
-      <div className="mt-2 font-mono text-xs text-slate-600">
-        exit 0
       </div>
     </div>
   );
