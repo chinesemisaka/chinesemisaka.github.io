@@ -30,7 +30,10 @@ export function HomePage() {
             <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter text-slate-100 mb-6 drop-shadow-sm">
               ZehanXi@<span className="text-emerald-500">SHU</span> ~$
             </h1>
-            <p className="text-slate-400 text-lg md:text-xl font-mono">
+            <p className="text-slate-300 text-xl md:text-2xl font-mono mb-6 drop-shadow-sm">
+              Wandering, building, and shaping the future
+            </p>
+            <p className="text-slate-500 text-lg md:text-xl font-mono">
               执行 `<span className="text-emerald-400">help</span>` 了解更多。
             </p>
           </div>
