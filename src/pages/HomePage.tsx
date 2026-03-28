@@ -25,8 +25,8 @@ export function HomePage() {
       />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        <section className="min-h-[90vh] flex flex-col items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 mt-24 mb-16">
-          <div className="w-full text-center mb-16">
+        <section className="min-h-screen flex flex-col items-center justify-center pt-32 pb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <div className="w-full text-center mt-24 mb-16">
             <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter text-slate-100 mb-6 drop-shadow-sm">
               ZehanXi@<span className="text-emerald-500">SHU</span> ~$
             </h1>
