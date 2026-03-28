@@ -6,10 +6,15 @@ export function HeroTerminal() {
   const history = useAppStore((state) => state.terminalHistory);
   const addHistory = useAppStore((state) => state.addTerminalHistory);
   const clearHistory = useAppStore((state) => state.clearTerminalHistory);
-  const endRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: "smooth"
+      });
+    }
   }, [history]);
 
   const handleCommand = (cmd: string) => {
@@ -17,6 +22,14 @@ export function HeroTerminal() {
     const normalizedCmd = cmd.trim().toLowerCase();
     
     switch (normalizedCmd) {
+      case "help":
+        addHistory("可用命令 (Available commands):");
+        addHistory("  help     - 显示此帮助信息");
+        addHistory("  whoami   - 显示个人信息与简介");
+        addHistory("  skills   - 显示核心技术栈");
+        addHistory("  ls       - 列出当前站点的所有目录");
+        addHistory("  clear    - 清空终端输出");
+        break;
       case "whoami":
         addHistory("Computer Science Student @ Shanghai University | AI 全栈开发者");
         addHistory("Wandering, building, and shaping the future");
@@ -36,7 +49,7 @@ export function HeroTerminal() {
       case "":
         break;
       default:
-        addHistory(`找不到命令: ${cmd}。可以尝试 'whoami', 'skills', 或 'ls'。`);
+        addHistory(`找不到命令: ${cmd}。输入 'help' 查看可用命令。`);
     }
   };
 
@@ -56,9 +69,12 @@ export function HeroTerminal() {
         <span className="ml-2 text-xs text-slate-500">ZehanXi@SHU ~</span>
       </div>
       
-      <div className="space-y-2 h-[300px] overflow-y-auto scrollbar-hide">
+      <div 
+        ref={scrollRef}
+        className="space-y-2 h-[300px] overflow-y-auto scrollbar-hide"
+      >
         {history.map((line, i) => (
-          <div key={i} className={line.startsWith("$") ? "text-emerald-400" : ""}>
+          <div key={i} className={line.startsWith("$") ? "text-emerald-400" : "whitespace-pre"}>
             {line}
           </div>
         ))}
@@ -75,7 +91,6 @@ export function HeroTerminal() {
             spellCheck={false}
           />
         </div>
-        <div ref={endRef} />
       </div>
     </div>
   );

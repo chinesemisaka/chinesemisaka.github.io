@@ -31,7 +31,7 @@ export function HomePage() {
               ZehanXi@<span className="text-emerald-500">SHU</span> ~$
             </h1>
             <p className="text-slate-400 text-lg md:text-xl font-mono">
-              执行 `<span className="text-emerald-400">whoami</span>` 了解更多。
+              执行 `<span className="text-emerald-400">help</span>` 了解更多。
             </p>
           </div>
           <HeroTerminal />
