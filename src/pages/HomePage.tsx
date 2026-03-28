@@ -25,16 +25,16 @@ export function HomePage() {
       />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        <section className="min-h-[90vh] flex flex-col items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 mt-12 mb-24">
-          <div className="w-full text-center mb-12">
+        <section className="min-h-[90vh] flex flex-col items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 mt-24 mb-16">
+          <div className="w-full text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter text-slate-100 mb-6 drop-shadow-sm">
               ZehanXi@<span className="text-emerald-500">SHU</span> ~$
             </h1>
-            <p className="text-slate-300 text-xl md:text-2xl font-mono mb-6 drop-shadow-sm">
+            <p className="text-slate-400/80 text-xl md:text-2xl font-mono mb-6 drop-shadow-sm">
               Wandering, building, and shaping the future
             </p>
-            <p className="text-slate-500 text-lg md:text-xl font-mono">
-              执行 `<span className="text-emerald-400">help</span>` 了解更多。
+            <p className="text-slate-600 text-lg md:text-xl font-mono">
+              执行 `<span className="text-emerald-500/80">help</span>` 了解更多。
             </p>
           </div>
           <HeroTerminal />
